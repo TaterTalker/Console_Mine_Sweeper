@@ -1,0 +1,11 @@
+C:\Users\August\Documents\GitHub\Console_Mine_Sweeper\Console_Mine_Sweeper\bin\Debug\Console_Mine_Sweeper.exe
+C:\Users\August\Documents\GitHub\Console_Mine_Sweeper\Console_Mine_Sweeper\bin\Debug\Console_Mine_Sweeper.pdb
+C:\Users\August\Documents\GitHub\Console_Mine_Sweeper\Console_Mine_Sweeper\bin\Debug\mscorlib.dll
+C:\Users\August\Documents\GitHub\Console_Mine_Sweeper\Console_Mine_Sweeper\bin\Debug\normidna.nlp
+C:\Users\August\Documents\GitHub\Console_Mine_Sweeper\Console_Mine_Sweeper\bin\Debug\normnfc.nlp
+C:\Users\August\Documents\GitHub\Console_Mine_Sweeper\Console_Mine_Sweeper\bin\Debug\normnfd.nlp
+C:\Users\August\Documents\GitHub\Console_Mine_Sweeper\Console_Mine_Sweeper\bin\Debug\normnfkc.nlp
+C:\Users\August\Documents\GitHub\Console_Mine_Sweeper\Console_Mine_Sweeper\bin\Debug\normnfkd.nlp
+C:\Users\August\Documents\GitHub\Console_Mine_Sweeper\Console_Mine_Sweeper\obj\x86\Debug\Console_Mine_Sweeper.csprojResolveAssemblyReference.cache
+C:\Users\August\Documents\GitHub\Console_Mine_Sweeper\Console_Mine_Sweeper\obj\x86\Debug\Console_Mine_Sweeper.exe
+C:\Users\August\Documents\GitHub\Console_Mine_Sweeper\Console_Mine_Sweeper\obj\x86\Debug\Console_Mine_Sweeper.pdb
