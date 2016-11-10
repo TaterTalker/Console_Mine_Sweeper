@@ -6,14 +6,11 @@ namespace Console_Mine_Sweeper
 	{
 		public static void Main(string[] args)
 		{
-			while (true)
-			{
-				string a = Console.ReadLine();
-				if (a == "ayy")
-				{
-					Console.WriteLine("lmao");
-				}
-			}
+            Board gameBoard = new Board();
+            gameBoard.genBoard(10, 10, 10);
+            gameBoard.drawBoard(gameBoard);
+            Console.WriteLine();
+            Console.ReadLine();
 		}
 	}
 }
