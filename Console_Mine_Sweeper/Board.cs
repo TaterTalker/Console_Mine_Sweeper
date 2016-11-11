@@ -10,15 +10,99 @@ namespace Console_Mine_Sweeper
             //lmao
         }
 
-        public void genBoard(int x, int y, int numBombs){
-            Random rng = new Random();
-            tiles = new Tile[x,y];
+        public int width;
+        public int height;
+        bool hasGameBeenLost = false;
 
-            for (int i = 0; i < x; i++)
+        public void clickTile(int x, int y)
+        {
+            tiles[x, y].isRevealed = true;
+            cascadeReveals(x, y);
+            if (tiles[x, y].isBomb)
             {
-                for (int o = 0; o < x; o++)
+                foreach (Tile t in tiles)
                 {
-                    tiles[i, o] = new Tile();
+                    t.isRevealed = true;
+                }
+                hasGameBeenLost = true;
+            }
+        }
+
+        public bool hasGameBeenWon()
+        {
+            bool tmp = true;
+            foreach (Tile t in tiles)
+            {
+                if (!t.isRevealed && !t.isBomb)
+                {
+                    tmp = false;
+                }
+            }
+            return tmp;
+        }
+
+        public void generateNumbers()
+        {
+            for (int y = 0; y < (tiles.GetLength(1)); y++)
+            {
+                for (int x = 0; x < (tiles.GetLength(0)); x++)
+                {
+                    for (int i = -1; i < 2; i++)
+                    {
+                        for (int o = -1; o < 2; o++)
+                        {
+                            try
+                            {
+                                if (tiles[x + o, y + i].isBomb == true)
+                                {
+                                    tiles[x, y].bombCount++;
+                                }
+                            }
+                            catch (Exception e) { }
+                        }
+                    }
+                }
+            }
+        }
+
+        public void cascadeReveals(int x, int y)
+        {
+            for (int i = -1; i < 2; i++){
+                for (int o = -1; o < 2; o++)
+                {
+                    try
+                    {
+                        if (tiles[x + o, y + i].bombCount == 0 && tiles[x + o, y + i].isBomb == false && tiles[x + o, y + i].isRevealed == false)
+                        {
+                            tiles[x + o, y + i].isRevealed = true;
+                            cascadeReveals(x + o, y + i);
+                        }
+                        else if (tiles[x + o, y + i].isBomb == false && tiles[x + o, y + i].isRevealed == false)
+                        {
+                            tiles[x + o, y + i].isRevealed = true;
+                        }
+                    }
+                    catch (Exception e) { }
+            }
+            }
+        }
+
+        public void placeFlag(int x, int y)
+        {
+            tiles[x, y].isFlagged = !tiles[x, y].isFlagged;
+        }
+
+        public void genBoard(int x, int y, int numBombs){
+            width = x;
+            height = y;
+            Random rng = new Random();
+            tiles = new Tile[width,height];
+
+            for (int i = 0; i < height; i++)
+            {
+                for (int o = 0; o < width; o++)
+                {
+                    tiles[o, i] = new Tile();
                 }
             }
 
@@ -29,23 +113,45 @@ namespace Console_Mine_Sweeper
                 int bombY;
                 do
                 {
-                    bombX = rng.Next(0, x);
-                    bombY = rng.Next(0, y);
+                    bombX = rng.Next(0, width);
+                    bombY = rng.Next(0, height);
                 } while (tiles[bombX, bombY].isBomb == true);
 
                 tiles[bombX, bombY].isBomb = true;
             }
+            generateNumbers();
         }
 
-        public void drawBoard(Board gameBoard)
+        public void drawBoard(Board gameBoard, Cursor cursor)
         {
             Console.Clear();
             for (int i = 0; i < (tiles.GetLength(1)); i++)
             {
                 for (int o = 0; o < (tiles.GetLength(0)); o++)
                 {
-                    Console.Write(tiles[i,o].tileIcon());
-                    Console.Write(" ");
+                    if (o == 0 && !(cursor.x == o && cursor.y == i))
+                    {
+                        Console.Write(" ");
+                    }
+                    else if (o==0)
+                    {
+                        Console.Write("[");
+                    }
+
+                    Console.Write(tiles[o,i].tileIcon());
+
+                    if (cursor.x == o && cursor.y == i)
+                    {
+                        Console.Write("]");
+                    }
+                    else if (cursor.x == o + 1 && cursor.y == i)
+                    {
+                        Console.Write("[");
+                    }
+                    else 
+                    {
+                        Console.Write(" ");
+                    }
                 }
                 Console.WriteLine();
             }
