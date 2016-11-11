@@ -5,11 +5,12 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.Console__Mine__Sweeper PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Console_Mine_Sweeper\Board.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Console_Mine_Sweeper\Cursor.cs">
     <Files>
-      <File FileName="Console_Mine_Sweeper\Program.cs" Line="9" Column="4" />
-      <File FileName="Console_Mine_Sweeper\Tile.cs" Line="14" Column="4" />
-      <File FileName="Console_Mine_Sweeper\Board.cs" Line="8" Column="10" />
+      <File FileName="Console_Mine_Sweeper\Program.cs" Line="14" Column="4" />
+      <File FileName="Console_Mine_Sweeper\Board.cs" Line="18" Column="14" />
+      <File FileName="Console_Mine_Sweeper\Tile.cs" Line="17" Column="14" />
+      <File FileName="Console_Mine_Sweeper\Cursor.cs" Line="6" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>

@@ -7,18 +7,25 @@ namespace Console_Mine_Sweeper
 
         public bool isBomb = false;
         public bool isRevealed = false;
-        public int bombCount()
-        {
-            return 0;
-        }
+        public int bombCount = 0;
+        public bool isFlagged = false;
+
         public string tileIcon()
         {
-            if (isBomb)
+            if (isFlagged&&!isRevealed)
+            {
+                return "!";
+            }
+            else if (isRevealed == false)
+            {
+                return "#";
+            }
+            else if (isBomb)
             {
                 return "B";
             }
             else {
-                return "0";
+                return bombCount.ToString();
             }
         }
 
