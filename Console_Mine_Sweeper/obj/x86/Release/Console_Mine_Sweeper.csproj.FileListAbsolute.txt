@@ -1,0 +1,2 @@
+F:\Console_Mine_Sweeper\Console_Mine_Sweeper\bin\Release\Console_Mine_Sweeper.exe
+F:\Console_Mine_Sweeper\Console_Mine_Sweeper\obj\x86\Release\Console_Mine_Sweeper.exe

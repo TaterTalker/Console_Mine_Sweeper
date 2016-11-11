@@ -9,3 +9,8 @@ C:\Users\August\Documents\GitHub\Console_Mine_Sweeper\Console_Mine_Sweeper\bin\D
 C:\Users\August\Documents\GitHub\Console_Mine_Sweeper\Console_Mine_Sweeper\obj\x86\Debug\Console_Mine_Sweeper.csprojResolveAssemblyReference.cache
 C:\Users\August\Documents\GitHub\Console_Mine_Sweeper\Console_Mine_Sweeper\obj\x86\Debug\Console_Mine_Sweeper.exe
 C:\Users\August\Documents\GitHub\Console_Mine_Sweeper\Console_Mine_Sweeper\obj\x86\Debug\Console_Mine_Sweeper.pdb
+F:\Console_Mine_Sweeper\Console_Mine_Sweeper\bin\Debug\Console_Mine_Sweeper.exe
+F:\Console_Mine_Sweeper\Console_Mine_Sweeper\bin\Debug\Console_Mine_Sweeper.pdb
+F:\Console_Mine_Sweeper\Console_Mine_Sweeper\obj\x86\Debug\Console_Mine_Sweeper.csprojResolveAssemblyReference.cache
+F:\Console_Mine_Sweeper\Console_Mine_Sweeper\obj\x86\Debug\Console_Mine_Sweeper.exe
+F:\Console_Mine_Sweeper\Console_Mine_Sweeper\obj\x86\Debug\Console_Mine_Sweeper.pdb

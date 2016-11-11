@@ -12,7 +12,7 @@ namespace Console_Mine_Sweeper
 
         public int width;
         public int height;
-        bool hasGameBeenLost = false;
+        public bool hasGameBeenLost = false;
 
         public void clickTile(int x, int y)
         {
@@ -36,8 +36,15 @@ namespace Console_Mine_Sweeper
                 if (!t.isRevealed && !t.isBomb)
                 {
                     tmp = false;
-                }
+				}
             }
+			if (tmp)
+			{
+				foreach (Tile t in tiles)
+				{
+					t.isRevealed = true;
+				}
+			}
             return tmp;
         }
 

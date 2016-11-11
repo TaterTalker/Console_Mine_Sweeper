@@ -8,22 +8,35 @@ namespace Console_Mine_Sweeper
 		public static void Main(string[] args)
 		{
             bool quit = false;
-            do
-            {
-                MainClass m = new MainClass();
-                Board gameBoard = new Board();
-                Cursor cursor = new Cursor(gameBoard);
-                gameBoard.genBoard(10, 10, 10);
+			do
+			{
+                Parameters parameters = new Parameters();
+				MainClass m = new MainClass();
+				Board gameBoard = new Board();
+				Cursor cursor = new Cursor(gameBoard);
+                parameters.inputParameters();
+                //gameBoard.genBoard(10, 10, 10);
+                gameBoard.genBoard(parameters.parameters[0], parameters.parameters[1], parameters.parameters[2]);
                 ConsoleKeyInfo input;
 
-                do
-                {
-                    gameBoard.drawBoard(gameBoard, cursor);
-                    input = Console.ReadKey();
-                    m.getInput(input, cursor, gameBoard);
+				do
+				{
+					gameBoard.drawBoard(gameBoard, cursor);
+					input = Console.ReadKey();
+					m.getInput(input, cursor, gameBoard);
 
-                } while (!gameBoard.hasGameBeenWon());
-                Console.WriteLine("you lost /n press 'q' to quit or 'r' to restart");
+				} while (!gameBoard.hasGameBeenWon());
+
+				gameBoard.drawBoard(gameBoard, cursor);
+				if (gameBoard.hasGameBeenLost)
+				{
+					Console.WriteLine("you lost");
+				}
+				else
+				{
+					Console.WriteLine("you won");
+				}
+				Console.WriteLine("press 'q' to quit or 'r' to restart");
 
 
                 do
@@ -62,5 +75,10 @@ namespace Console_Mine_Sweeper
                     break;
             }
         }
+
+		void getParameters()
+		{
+			
+		}
 	}
 }
